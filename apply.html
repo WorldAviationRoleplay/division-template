@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="assets/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Apply for an AOC</title>
     <style>
         body { margin: 0; font-family: Arial, sans-serif; }
         header {
@@ -47,24 +47,20 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html" style="display: flex; align-items: center; height: 100%; text-decoration: none;">
-                <img src="assets/logo.png" alt="Logo">
-            </a>
-        </div>
-        <nav>
-            <a href="flights.html">Flights</a>
-            <a href="apply.html">Apply for an AOC</a>
-            <a href="admin.html">Admin</a>
-            <a href="files/">Files</a>
-        </nav>
-    </header>
+    <div id="navbar-placeholder"></div>
     <main>
-        <div>
-            <h1>Apply for an AOC</h1>
-            <p>Please contact Sebastian Kang to apply for your Air Operators Certificate.</p>
+        <div style="text-align:center; margin-top:3em;">
+            <h1 style="font-size:2.8em; color:#8650FE; font-weight:800; letter-spacing:2px; text-shadow:0 2px 12px #0002; margin-bottom:0.5em;">Apply for an AOC</h1>
+            <p style="font-size:1.3em; color:#222; background:#f5f5ff; display:inline-block; padding:1em 2em; border-radius:18px; box-shadow:0 2px 12px #8650FE22; font-weight:500;">Please contact <span style='color:#8650FE;font-weight:700;'>Sebastian Kang</span> to apply for your Air Operators Certificate.</p>
         </div>
     </main>
 </body>
+<script>
+// Load navbar.html into the placeholder
+fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+    });
+</script>
 </html>
